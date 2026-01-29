@@ -1,45 +1,59 @@
 # OPTIGA™ IoT Kit – Random Number Generation (Learning Project)
 
-This repository contains a **learning and experimental project** developed using  
+This repository contains a **learning-focused embedded C project** developed using  
 **Infineon OPTIGA™ IoT Kit**, **ModusToolbox™**, and **mbedTLS**.
 
 The application demonstrates **cryptographically secure random number generation**
-using **CTR_DRBG** and prints the generated data over **UART** in hexadecimal format.
+using **CTR_DRBG** and prints the generated random bytes over **UART** in hexadecimal
+format.
+
+This project is created **only for learning and educational purposes**.
 
 ---
 
-## 📌 Project Purpose
+## Project Summary
 
-This project is created **purely for learning and educational purposes**, to understand:
-
-- ModusToolbox™ project structure
-- Board initialization on OPTIGA™ IoT Kit
-- UART retargeting using `cy_retarget_io`
-- Entropy initialization
-- Random number generation using **mbedTLS CTR_DRBG**
-- Embedded C project organization
-- Basic GitHub usage (README, YAML, version control)
+- Board: Infineon OPTIGA™ IoT Kit  
+- Framework: ModusToolbox™  
+- Language: C  
+- Crypto Library: mbedTLS  
+- Output: UART (hexadecimal data)  
 
 ---
 
-## 🧰 Hardware Requirements
+## What This Project Demonstrates
 
-- Infineon **OPTIGA™ IoT Kit**
+- Board initialization using `cybsp_init()`
+- UART redirection using `cy_retarget_io`
+- Entropy initialization with mbedTLS
+- CTR_DRBG random number generation
+- Printing binary data in hex format
+- Basic embedded project structure
+- Proper GitHub documentation practices
+
+---
+
+## Hardware Requirements
+
+- Infineon OPTIGA™ IoT Kit
 - USB cable (power + UART debug)
 - PC / Laptop
 
 ---
 
-## 💻 Software Requirements
+## Software Requirements
 
-- **ModusToolbox™** (recommended v3.x or later)
-- GNU Arm Embedded Toolchain (installed via ModusToolbox)
-- Terminal emulator:
+- ModusToolbox™ (v3.x or later)
+- GNU Arm Embedded Toolchain
+- Serial terminal:
   - PuTTY / Tera Term (Windows)
   - minicom / screen (Linux)
   - CoolTerm (macOS)
 
 ---
 
-## 📂 Repository Structure
+## Build and Run Steps
 
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/varunkumarp17/optiga-rng-demo.git
