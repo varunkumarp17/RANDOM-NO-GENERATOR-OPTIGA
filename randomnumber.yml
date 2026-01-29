@@ -1,0 +1,34 @@
+
+---
+
+## ⚙️ Application Flow
+
+1. **Board Initialization**
+   - Initializes OPTIGA™ IoT Kit hardware using `cybsp_init()`
+
+2. **Interrupt Enable**
+   - Enables global interrupts
+
+3. **UART Initialization**
+   - Redirects `printf()` output to debug UART
+
+4. **Entropy Setup**
+   - Initializes `mbedtls_entropy_context`
+
+5. **CTR_DRBG Initialization**
+   - Seeds DRBG with entropy and personalization string
+
+6. **Random Number Generation**
+   - Generates 64 bytes of cryptographically secure random data
+
+7. **UART Output**
+   - Displays the random data in hexadecimal format
+
+---
+
+## ▶️ Build and Run Steps
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/<your-username>/optiga-rng-demo.git
+cd optiga-rng-demo
